@@ -1,0 +1,5 @@
+${PODS_ROOT}/Target Support Files/Pods-Fruit Info/Pods-Fruit Info-frameworks.sh
+${BUILT_PRODUCTS_DIR}/CardsLayout/CardsLayout.framework
+${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework
+${BUILT_PRODUCTS_DIR}/Realm/Realm.framework
+${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework

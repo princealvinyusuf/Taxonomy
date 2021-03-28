@@ -1,0 +1,6 @@
+framework module Pods_Fruit_Info {
+  umbrella header "Pods-Fruit Info-umbrella.h"
+
+  export *
+  module * { export * }
+}

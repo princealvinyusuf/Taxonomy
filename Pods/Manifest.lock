@@ -1,0 +1,41 @@
+PODS:
+  - CardsLayout (0.0.1)
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
+  - Realm (10.7.2):
+    - Realm/Headers (= 10.7.2)
+  - Realm/Headers (10.7.2)
+  - RealmSwift (10.7.2):
+    - Realm (= 10.7.2)
+
+DEPENDENCIES:
+  - CardsLayout
+  - ChameleonFramework/Swift (from `https://github.com/wowansm/Chameleon.git`, branch `swift5`)
+  - RealmSwift
+
+SPEC REPOS:
+  trunk:
+    - CardsLayout
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  ChameleonFramework:
+    :branch: swift5
+    :git: https://github.com/wowansm/Chameleon.git
+
+CHECKOUT OPTIONS:
+  ChameleonFramework:
+    :commit: 96d52c36a45847fff60bcff7a58fec1e4bd7390b
+    :git: https://github.com/wowansm/Chameleon.git
+
+SPEC CHECKSUMS:
+  CardsLayout: ceeb8f9c26319b47a2f0995ea4590cf7ba881462
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  Realm: e523da9ade306c5ae87e85dc09fdef148d3e1cc1
+  RealmSwift: 4f6758c3adbdcc87f7b7777107226532a077f61c
+
+PODFILE CHECKSUM: 503fa1499b3e73825b588526811ecdd5de987520
+
+COCOAPODS: 1.10.1
