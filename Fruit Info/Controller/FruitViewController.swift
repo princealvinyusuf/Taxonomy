@@ -29,6 +29,47 @@ class FruitViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     
     
+    @IBOutlet weak var buttonCollection: UIButton!
+    
+    @IBOutlet weak var imageEmpty: UIImageView!
+    @IBOutlet weak var emptyLabel: UILabel!
+    
+    @IBOutlet weak var informationView: UIView!
+    
+    func hiddenComponent() {
+        imageView.isHidden = true
+        nameLabel.isHidden = true
+        genusLabel.isHidden = true
+        familyLabel.isHidden = true
+        orderLabel.isHidden = true
+        carbohydratesLabel.isHidden = true
+        proteinLabel.isHidden = true
+        fatLabel.isHidden = true
+        caloriesLabel.isHidden = true
+        sugarLabel.isHidden = true
+        buttonCollection.isHidden = true
+        informationView.isHidden = true
+        emptyLabel.isHidden = false
+        imageEmpty.isHidden = false
+    }
+    
+    func showComponent() {
+        imageView.isHidden = false
+        nameLabel.isHidden = false
+        genusLabel.isHidden = false
+        familyLabel.isHidden = false
+        orderLabel.isHidden = false
+        carbohydratesLabel.isHidden = false
+        proteinLabel.isHidden = false
+        fatLabel.isHidden = false
+        caloriesLabel.isHidden = false
+        sugarLabel.isHidden = false
+        buttonCollection.isHidden = false
+        informationView.isHidden = false
+        emptyLabel.isHidden = true
+        imageEmpty.isHidden = true
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +80,8 @@ class FruitViewController: UIViewController {
         setSearchController()
         
         tabBarController?.tabBar.isHidden = true
+        
+        hiddenComponent()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,11 +101,10 @@ class FruitViewController: UIViewController {
         self.definesPresentationContext = true
         let searchController = UISearchController(searchResultsController: nil)
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search artists"
+        searchController.searchBar.placeholder = "Fruit Name"
         self.navigationItem.searchController = searchController
         searchController.searchBar.delegate = self
         
-//      searchController.searchResultsUpdater = self.viewModel
     }
     
     @IBAction func collectionButtonPressed(_ sender: Any) {
@@ -103,16 +145,7 @@ class FruitViewController: UIViewController {
 
 // MARK: - SEARCHBAR FUNCTION
 
-extension FruitViewController: UISearchBarDelegate, UISearchResultsUpdating {
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("Search Pressed")
-        
-    }
-    
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print("cancel Pressed")
-    }
+extension FruitViewController: UISearchBarDelegate {
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
         print("End Inputing")
@@ -122,14 +155,9 @@ extension FruitViewController: UISearchBarDelegate, UISearchResultsUpdating {
             fruitManager.fetchData(fruitName: safeSearch)
             
         }
+    
     }
     
-    func updateSearchResults(for searchController: UISearchController) {
-        print("Searching with: " + (searchController.searchBar.text ?? ""))
-        let searchText = (searchController.searchBar.text ?? "")
-//        self.currentSearchText = searchText
-//        search()
-    }
 }
 
 
@@ -147,7 +175,7 @@ extension FruitViewController: FruitManagerDelegate {
             self.caloriesLabel.text = String(fruit.calories)
             self.sugarLabel.text = String(fruit.sugar)
             self.nameLabel.text = String(fruit.name)
-            
+            self.showComponent()
         }
     }
     

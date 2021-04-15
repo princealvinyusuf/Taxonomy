@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		68EA422332BA550CA3D13C1C /* Pods_Fruit_Info.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDDA504290633FD2A7BDC96E /* Pods_Fruit_Info.framework */; };
 		9F039896260F03FA00E862F9 /* TaxonomyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F039895260F03FA00E862F9 /* TaxonomyViewController.swift */; };
-		9F0EE16F260F1D0A00E6AD05 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EE16E260F1D0A00E6AD05 /* AnimalViewController.swift */; };
-		9F0EE172260F1D1500E6AD05 /* FungiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F0EE171260F1D1500E6AD05 /* FungiViewController.swift */; };
 		9F3C4057260F5F9200ACB1AF /* FruitObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C4056260F5F9200ACB1AF /* FruitObject.swift */; };
 		9F3C405A260F656B00ACB1AF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */; };
 		9FB1487A260E9D3300028494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB14879260E9D3300028494 /* AppDelegate.swift */; };
@@ -20,16 +18,19 @@
 		9FB14883260E9D3300028494 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9FB14882260E9D3300028494 /* Assets.xcassets */; };
 		9FB14886260E9D3300028494 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FB14884260E9D3300028494 /* LaunchScreen.storyboard */; };
 		9FB14894260EAB0C00028494 /* FruitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB14893260EAB0C00028494 /* FruitManager.swift */; };
+		9FC16811261AD7020001AA79 /* AnimalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC16810261AD7020001AA79 /* AnimalManager.swift */; };
+		9FC16817261ADB600001AA79 /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC16816261ADB600001AA79 /* Animal.swift */; };
+		9FC1681A261AE4830001AA79 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC16819261AE4830001AA79 /* AnimalModel.swift */; };
+		9FD6CB9E26119BE100E74CD5 /* TaxonomyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD6CB9D26119BE100E74CD5 /* TaxonomyCell.swift */; };
 		9FD82EB2260EAFE10068AEAE /* FruitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD82EB1260EAFE10068AEAE /* FruitData.swift */; };
 		9FEE3D63260F720F000C6EF6 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEE3D62260F720F000C6EF6 /* CollectionCell.swift */; };
 		9FF02DBF260F29F400DF994C /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF02DBE260F29F400DF994C /* FruitModel.swift */; };
+		9FF19ADB26281E7200290021 /* AnimalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FF19ADA26281E7200290021 /* AnimalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		18561BBAE6109FFD8F42963C /* Pods-Fruit Info.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruit Info.release.xcconfig"; path = "Target Support Files/Pods-Fruit Info/Pods-Fruit Info.release.xcconfig"; sourceTree = "<group>"; };
 		9F039895260F03FA00E862F9 /* TaxonomyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonomyViewController.swift; sourceTree = "<group>"; };
-		9F0EE16E260F1D0A00E6AD05 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
-		9F0EE171260F1D1500E6AD05 /* FungiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungiViewController.swift; sourceTree = "<group>"; };
 		9F3C4056260F5F9200ACB1AF /* FruitObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitObject.swift; sourceTree = "<group>"; };
 		9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		9FB14876260E9D3300028494 /* Fruit Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruit Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,9 +42,14 @@
 		9FB14885260E9D3300028494 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9FB14887260E9D3300028494 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FB14893260EAB0C00028494 /* FruitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitManager.swift; sourceTree = "<group>"; };
+		9FC16810261AD7020001AA79 /* AnimalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalManager.swift; sourceTree = "<group>"; };
+		9FC16816261ADB600001AA79 /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		9FC16819261AE4830001AA79 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
+		9FD6CB9D26119BE100E74CD5 /* TaxonomyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonomyCell.swift; sourceTree = "<group>"; };
 		9FD82EB1260EAFE10068AEAE /* FruitData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitData.swift; sourceTree = "<group>"; };
 		9FEE3D62260F720F000C6EF6 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		9FF02DBE260F29F400DF994C /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
+		9FF19ADA26281E7200290021 /* AnimalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewController.swift; sourceTree = "<group>"; };
 		BDDA504290633FD2A7BDC96E /* Pods_Fruit_Info.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fruit_Info.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3212FC67D5218A9C244B30D /* Pods-Fruit Info.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruit Info.debug.xcconfig"; path = "Target Support Files/Pods-Fruit Info/Pods-Fruit Info.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,10 +111,10 @@
 		9FB1488F260E9DF200028494 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9FB14893260EAB0C00028494 /* FruitManager.swift */,
-				9FD82EB1260EAFE10068AEAE /* FruitData.swift */,
-				9FF02DBE260F29F400DF994C /* FruitModel.swift */,
-				9F3C4056260F5F9200ACB1AF /* FruitObject.swift */,
+				9FF19AD12628124900290021 /* Fruit */,
+				9FC16810261AD7020001AA79 /* AnimalManager.swift */,
+				9FC16816261ADB600001AA79 /* Animal.swift */,
+				9FC16819261AE4830001AA79 /* AnimalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +124,7 @@
 			children = (
 				9FB1487F260E9D3300028494 /* Main.storyboard */,
 				9FEE3D62260F720F000C6EF6 /* CollectionCell.swift */,
+				9FD6CB9D26119BE100E74CD5 /* TaxonomyCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,11 +134,21 @@
 			children = (
 				9F039895260F03FA00E862F9 /* TaxonomyViewController.swift */,
 				9FB1487D260E9D3300028494 /* FruitViewController.swift */,
-				9F0EE16E260F1D0A00E6AD05 /* AnimalViewController.swift */,
-				9F0EE171260F1D1500E6AD05 /* FungiViewController.swift */,
 				9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */,
+				9FF19ADA26281E7200290021 /* AnimalViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9FF19AD12628124900290021 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				9FB14893260EAB0C00028494 /* FruitManager.swift */,
+				9FD82EB1260EAFE10068AEAE /* FruitData.swift */,
+				9FF02DBE260F29F400DF994C /* FruitModel.swift */,
+				9F3C4056260F5F9200ACB1AF /* FruitObject.swift */,
+			);
+			path = Fruit;
 			sourceTree = "<group>";
 		};
 		F41AC0727A7EBD2AD12C969A /* Frameworks */ = {
@@ -258,12 +275,15 @@
 			files = (
 				9FB1487E260E9D3300028494 /* FruitViewController.swift in Sources */,
 				9F3C4057260F5F9200ACB1AF /* FruitObject.swift in Sources */,
-				9F0EE16F260F1D0A00E6AD05 /* AnimalViewController.swift in Sources */,
 				9FD82EB2260EAFE10068AEAE /* FruitData.swift in Sources */,
 				9FB1487A260E9D3300028494 /* AppDelegate.swift in Sources */,
-				9F0EE172260F1D1500E6AD05 /* FungiViewController.swift in Sources */,
+				9FC16811261AD7020001AA79 /* AnimalManager.swift in Sources */,
+				9FC1681A261AE4830001AA79 /* AnimalModel.swift in Sources */,
+				9FD6CB9E26119BE100E74CD5 /* TaxonomyCell.swift in Sources */,
+				9FC16817261ADB600001AA79 /* Animal.swift in Sources */,
 				9F039896260F03FA00E862F9 /* TaxonomyViewController.swift in Sources */,
 				9FB14894260EAB0C00028494 /* FruitManager.swift in Sources */,
+				9FF19ADB26281E7200290021 /* AnimalViewController.swift in Sources */,
 				9FF02DBF260F29F400DF994C /* FruitModel.swift in Sources */,
 				9FB1487C260E9D3300028494 /* SceneDelegate.swift in Sources */,
 				9F3C405A260F656B00ACB1AF /* CollectionViewController.swift in Sources */,

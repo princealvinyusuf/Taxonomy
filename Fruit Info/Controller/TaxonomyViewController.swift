@@ -7,21 +7,20 @@
 
 import UIKit
 import CardsLayout
+import ChameleonFramework
 
 class TaxonomyViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var colors: [UIColor] = [
-        UIColor(red: 237, green: 37, blue: 78),
-        UIColor(red: 249, green: 220, blue: 92),
-        UIColor(red: 194, green: 234, blue: 189),
+    var classLabel: [String] = [
+        "Animal", "Plant", "Fungi"
     ]
     
-    var image: [UIImage?] = [
+    var classImage: [UIImage?] = [
         UIImage(named: "orangutan"),
         UIImage(named: "tree"),
-        UIImage(named: "fungi")
+        UIImage(named: "fungi"),
     ]
     
     override func viewDidLoad() {
@@ -40,14 +39,19 @@ class TaxonomyViewController: UIViewController {
 extension TaxonomyViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return colors.count
+        return classLabel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionView", for: indexPath)
+        
+        let randomColor = UIColor.randomFlat()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionView", for: indexPath) as! TaxonomyCell
         cell.layer.cornerRadius = 8.0
-        cell.backgroundColor = colors[indexPath.row]
-        cell.backgroundView = UIImageView(image: image[indexPath.row])
+        cell.backgroundColor = randomColor
+        cell.classLabel.text = classLabel[indexPath.row]
+        cell.classLabel.textColor = ContrastColorOf(randomColor, returnFlat: true)
+        cell.imageView.image = classImage[indexPath.row]
+
         return cell
     }
     
@@ -73,11 +77,9 @@ extension TaxonomyViewController: UICollectionViewDelegate, UICollectionViewData
             let fruitVC = segue.destination as! FruitViewController
         }
         
-        if segue.identifier == "fungiSegue" {
-            let fungiVC = segue.destination as! FungiViewController
-        }
-        
-        
+//        if segue.identifier == "fungiSegue" {
+//            let fungiVC = segue.destination as! FungiViewController
+//        }
         
     }
     
