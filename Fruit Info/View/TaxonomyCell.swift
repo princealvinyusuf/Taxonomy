@@ -12,11 +12,10 @@ class TaxonomyCell: UICollectionViewCell {
     
     @IBOutlet weak var classLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var introductionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-//        imageView.layer.masksToBounds = true
         
         imageView.layer.borderWidth=1.0
         imageView.layer.masksToBounds = false

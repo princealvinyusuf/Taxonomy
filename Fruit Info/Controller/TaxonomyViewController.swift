@@ -14,13 +14,16 @@ class TaxonomyViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var classLabel: [String] = [
-        "Animal", "Plant", "Fungi"
+        "Animal", "Fruit",
     ]
     
     var classImage: [UIImage?] = [
         UIImage(named: "orangutan"),
         UIImage(named: "tree"),
-        UIImage(named: "fungi"),
+    ]
+    
+    var introductionWord: [String] = [
+        "Animal kingdom classification is an important system for understanding how all living organisms are related. Based on the Linnaeus method, species are arranged grouped based on shared characteristics. This system of animal kingdom classification was developed by Swedish botanist Carolus Linnaeus in the 1700’s.", "There are two common types of fruit classifications: those that are fleshy and those that are dry. And then there are the subdivisions under each of those categories. Fruit varieties are further classified depending upon their different seed dispersal methods."
     ]
     
     override func viewDidLoad() {
@@ -51,35 +54,31 @@ extension TaxonomyViewController: UICollectionViewDelegate, UICollectionViewData
         cell.classLabel.text = classLabel[indexPath.row]
         cell.classLabel.textColor = ContrastColorOf(randomColor, returnFlat: true)
         cell.imageView.image = classImage[indexPath.row]
-
+        cell.introductionLabel.text = introductionWord[indexPath.row]
+        cell.introductionLabel.textColor = ContrastColorOf(randomColor, returnFlat: true)
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            switch indexPath.row {
-            case 0:
-                self.performSegue(withIdentifier: "animalSegue", sender: self)
-            case 1:
-                self.performSegue(withIdentifier: "fruitSegue", sender: self)
-            case 2:
-                self.performSegue(withIdentifier: "fungiSegue", sender: self)
-            default:
-                print("Default")
-            }
+        switch indexPath.row {
+        case 0:
+            self.performSegue(withIdentifier: "animalSegue", sender: self)
+        case 1:
+            self.performSegue(withIdentifier: "fruitSegue", sender: self)
+        default:
+            print("Default")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "animalSegue" {
-            let animalVC = segue.destination as! AnimalViewController
+            segue.destination as! AnimalViewController
         }
         
         if segue.identifier == "fruitSegue" {
-            let fruitVC = segue.destination as! FruitViewController
+            segue.destination as! FruitViewController
         }
-        
-//        if segue.identifier == "fungiSegue" {
-//            let fungiVC = segue.destination as! FungiViewController
-//        }
         
     }
     
