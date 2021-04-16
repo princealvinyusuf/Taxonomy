@@ -10,7 +10,8 @@ import RealmSwift
 
 class AnimalViewController: UIViewController {
     
-    
+    // Realm
+    let realm = try! Realm()
     
     // Object
     var animalManager = AnimalManager()
@@ -73,6 +74,8 @@ class AnimalViewController: UIViewController {
         super.viewDidLoad()
         
         setSearchController()
+        
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         tabBarController?.tabBar.isHidden = true
         hiddenComponent()
@@ -148,13 +151,51 @@ extension AnimalViewController: UISearchBarDelegate {
 
 
 
-// MARK: - BUTTON PRESSED
+// MARK: - BUTTON PRESSED & DATA MANIPULATION
 
 extension AnimalViewController {
     
     @IBAction func addCollectionPressed(_ sender: UIButton) {
-        print("Pressed")
+        
+        if let alpha = alphaLabel.text, let family = familyLabel.text, let name = nameLabel.text, let kingdom = kingdomLabel.text, let phylum = phylumLabel.text, let animalClass = classLabel.text, let order = orderLabel.text, let genus = genusLabel.text, let species = speciesLabel.text {
+            
+            let animalObject = AnimalObject()
+            animalObject.alpha = alpha
+            animalObject.family = family
+            animalObject.name = name
+            animalObject.kingdom = kingdom
+            animalObject.phylum = phylum
+            animalObject.animalClass = animalClass
+            animalObject.order = order
+            animalObject.genus = genus
+            animalObject.species = species
+            save(animal: animalObject)
+            
+            let alert = UIAlertController(title: "Successfully", message: "Data has successful saved", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                
+                self.navigationController?.popViewController(animated: true)
+                
+            })
+            alert.addAction(action)
+            present(alert, animated: true, completion: nil)
+        }
+        
+        
+    }
+    
+    func save(animal: AnimalObject) {
+        do {
+            try realm.write {
+                realm.add(animal)
+            }
+        } catch {
+            print("Error to save data \(error.localizedDescription)")
+        }
+        
     }
 }
+
+
 
 

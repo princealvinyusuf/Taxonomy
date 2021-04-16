@@ -11,6 +11,7 @@
 		9F039896260F03FA00E862F9 /* TaxonomyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F039895260F03FA00E862F9 /* TaxonomyViewController.swift */; };
 		9F3C4057260F5F9200ACB1AF /* FruitObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C4056260F5F9200ACB1AF /* FruitObject.swift */; };
 		9F3C405A260F656B00ACB1AF /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */; };
+		9F7C635C26293D7B00682749 /* AnimalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C635B26293D7B00682749 /* AnimalObject.swift */; };
 		9FB1487A260E9D3300028494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB14879260E9D3300028494 /* AppDelegate.swift */; };
 		9FB1487C260E9D3300028494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1487B260E9D3300028494 /* SceneDelegate.swift */; };
 		9FB1487E260E9D3300028494 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1487D260E9D3300028494 /* FruitViewController.swift */; };
@@ -33,6 +34,7 @@
 		9F039895260F03FA00E862F9 /* TaxonomyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxonomyViewController.swift; sourceTree = "<group>"; };
 		9F3C4056260F5F9200ACB1AF /* FruitObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitObject.swift; sourceTree = "<group>"; };
 		9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		9F7C635B26293D7B00682749 /* AnimalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalObject.swift; sourceTree = "<group>"; };
 		9FB14876260E9D3300028494 /* Fruit Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruit Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB14879260E9D3300028494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB1487B260E9D3300028494 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9F7C635E2629418900682749 /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				9FC16810261AD7020001AA79 /* AnimalManager.swift */,
+				9FC16816261ADB600001AA79 /* Animal.swift */,
+				9FC16819261AE4830001AA79 /* AnimalModel.swift */,
+				9F7C635B26293D7B00682749 /* AnimalObject.swift */,
+			);
+			path = Animal;
+			sourceTree = "<group>";
+		};
 		9FB1486D260E9D3300028494 = {
 			isa = PBXGroup;
 			children = (
@@ -111,10 +124,8 @@
 		9FB1488F260E9DF200028494 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9F7C635E2629418900682749 /* Animal */,
 				9FF19AD12628124900290021 /* Fruit */,
-				9FC16810261AD7020001AA79 /* AnimalManager.swift */,
-				9FC16816261ADB600001AA79 /* Animal.swift */,
-				9FC16819261AE4830001AA79 /* AnimalModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,8 +145,8 @@
 			children = (
 				9F039895260F03FA00E862F9 /* TaxonomyViewController.swift */,
 				9FB1487D260E9D3300028494 /* FruitViewController.swift */,
-				9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */,
 				9FF19ADA26281E7200290021 /* AnimalViewController.swift */,
+				9F3C4059260F656B00ACB1AF /* CollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 				9FB1487A260E9D3300028494 /* AppDelegate.swift in Sources */,
 				9FC16811261AD7020001AA79 /* AnimalManager.swift in Sources */,
 				9FC1681A261AE4830001AA79 /* AnimalModel.swift in Sources */,
+				9F7C635C26293D7B00682749 /* AnimalObject.swift in Sources */,
 				9FD6CB9E26119BE100E74CD5 /* TaxonomyCell.swift in Sources */,
 				9FC16817261ADB600001AA79 /* Animal.swift in Sources */,
 				9F039896260F03FA00E862F9 /* TaxonomyViewController.swift in Sources */,
