@@ -5,7 +5,7 @@
 //  Created by Prince Alvin Yusuf on 05/04/21.
 //
 
-import Foundation
+import UIKit
 
 protocol AnimalManagerDelegate {
     func didFailWithError(error: Error)
@@ -70,6 +70,7 @@ struct AnimalManager {
             let family = decodedData[0].family
             let genus = decodedData[0].genus
             let species = decodedData[0].species
+            let photo = decodedData[0].photo
             
             var animalModel = AnimalModel()
             animalModel.alpha = alpha
@@ -81,6 +82,7 @@ struct AnimalManager {
             animalModel.order = order
             animalModel.genus = genus
             animalModel.species = species
+            animalModel.photo = photo
             
             print(animalModel)
             return animalModel
@@ -91,6 +93,11 @@ struct AnimalManager {
         
         
         
+    }
+    
+    
+    func getImageData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
 }

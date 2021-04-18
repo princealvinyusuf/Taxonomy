@@ -121,8 +121,12 @@ extension AnimalViewController: AnimalManagerDelegate  {
             self.genusLabel.text = animalModel.genus
             self.speciesLabel.text = animalModel.species
             
+            let url = URL(string: animalModel.photo)!
+            self.downloadImage(from: url)
+            
             self.showComponent()
         }
+        
         
     }
     
@@ -194,6 +198,22 @@ extension AnimalViewController {
         }
         
     }
+    
+    
+    func downloadImage(from url: URL) {
+        print("Download Started")
+        
+        animalManager.getImageData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            print(response?.suggestedFilename ?? url.lastPathComponent)
+            print("Download Finished")
+            DispatchQueue.main.async() { [weak self] in
+                self?.imageView.image = UIImage(data: data)
+            }
+        }
+    }
+    
+    
 }
 
 

@@ -15,8 +15,6 @@ class FruitViewController: UIViewController {
     var fruitManager = FruitManager()
     var fruitModel = FruitModel()
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var genusLabel: UILabel!
     @IBOutlet weak var familyLabel: UILabel!
     @IBOutlet weak var orderLabel: UILabel!
@@ -37,7 +35,6 @@ class FruitViewController: UIViewController {
     @IBOutlet weak var informationView: UIView!
     
     func hiddenComponent() {
-        imageView.isHidden = true
         nameLabel.isHidden = true
         genusLabel.isHidden = true
         familyLabel.isHidden = true
@@ -54,7 +51,6 @@ class FruitViewController: UIViewController {
     }
     
     func showComponent() {
-        imageView.isHidden = false
         nameLabel.isHidden = false
         genusLabel.isHidden = false
         familyLabel.isHidden = false
@@ -76,7 +72,6 @@ class FruitViewController: UIViewController {
         print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         
         fruitManager.delegate = self
-        setImageView()
         setSearchController()
         
         tabBarController?.tabBar.isHidden = true
@@ -86,15 +81,6 @@ class FruitViewController: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         tabBarController?.tabBar.isHidden = false
-    }
-    
-    // MARK: - PROPERTY SET
-    func setImageView() {
-        imageView.layer.borderWidth = 2
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-        imageView.layer.cornerRadius = imageView.frame.height/2
-        imageView.clipsToBounds = true
     }
     
     func setSearchController() {

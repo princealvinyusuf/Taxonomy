@@ -18,5 +18,6 @@ struct AnimalModel {
     var family: String = ""
     var genus: String = ""
     var species: String = ""
+    var photo: String = ""
     
 }

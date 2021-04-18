@@ -19,6 +19,6 @@ class AnimalObject: Object {
     @objc dynamic var order: String = ""
     @objc dynamic var genus: String = ""
     @objc dynamic var species: String = ""
-    
+    @objc dynamic var photo: String = ""
     
 }
