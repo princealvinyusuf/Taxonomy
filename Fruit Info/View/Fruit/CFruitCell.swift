@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CollectionCell: UICollectionViewCell {
+class CFruitCell: UICollectionViewCell {
     
     
     @IBOutlet weak var nameLabel: UILabel!

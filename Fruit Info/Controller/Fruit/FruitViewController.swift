@@ -121,6 +121,13 @@ class FruitViewController: UIViewController {
 
         save(with: newFruit)
         
+        let alert = UIAlertController(title: "Successfully", message: "Data has successful saved", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default) { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+        
     }
     
     // MARK: - DATA MANIPULATION IN REALM DATABASE
