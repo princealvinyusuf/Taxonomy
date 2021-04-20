@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SlideView" customModule="Fruit_Info" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iG8-g3-EZE">
+                    <rect key="frame" x="0.0" y="44" width="414" height="836"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="orangutan" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hfy-h2-PVa">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We make volunteering quick and simple. Just select your location and browse our categories." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjN-vd-bzS">
+                            <rect key="frame" x="15" y="562" width="384" height="36"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgY-b6-JYg">
+                            <rect key="frame" x="152.5" y="515" width="109" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="XwJ-UN-SI7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hfy-h2-PVa" firstAttribute="height" secondItem="iG8-g3-EZE" secondAttribute="height" multiplier="0.598198" id="4ff-Ru-j6z"/>
+                        <constraint firstAttribute="trailing" secondItem="hfy-h2-PVa" secondAttribute="trailing" id="8d4-Yg-Gp3"/>
+                        <constraint firstItem="CgY-b6-JYg" firstAttribute="top" secondItem="hfy-h2-PVa" secondAttribute="bottom" constant="15" id="KR0-gw-ZeE"/>
+                        <constraint firstItem="CgY-b6-JYg" firstAttribute="centerX" secondItem="iG8-g3-EZE" secondAttribute="centerX" id="MGz-bi-CFx"/>
+                        <constraint firstItem="hfy-h2-PVa" firstAttribute="centerX" secondItem="iG8-g3-EZE" secondAttribute="centerX" id="P4Z-WC-Gxa"/>
+                        <constraint firstItem="hfy-h2-PVa" firstAttribute="top" secondItem="iG8-g3-EZE" secondAttribute="top" id="Qxo-rD-z70"/>
+                        <constraint firstItem="tjN-vd-bzS" firstAttribute="top" secondItem="CgY-b6-JYg" secondAttribute="bottom" constant="15" id="UE1-Ge-bdm"/>
+                        <constraint firstAttribute="trailing" secondItem="tjN-vd-bzS" secondAttribute="trailing" constant="15" id="emy-gy-AEm"/>
+                        <constraint firstItem="hfy-h2-PVa" firstAttribute="leading" secondItem="iG8-g3-EZE" secondAttribute="leading" id="kDO-mC-yqU"/>
+                        <constraint firstItem="tjN-vd-bzS" firstAttribute="leading" secondItem="iG8-g3-EZE" secondAttribute="leading" constant="15" id="s1L-qX-sCt"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="iG8-g3-EZE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="133-ux-ABA"/>
+                <constraint firstItem="iG8-g3-EZE" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="gkf-JR-Dbs"/>
+                <constraint firstItem="iG8-g3-EZE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="xYI-h9-Qit"/>
+            </constraints>
+            <connections>
+                <outlet property="descriptionLabel" destination="tjN-vd-bzS" id="A8h-Tz-lfD"/>
+                <outlet property="underImageLabel" destination="CgY-b6-JYg" id="DHX-gS-rz7"/>
+                <outlet property="welcomeImage" destination="hfy-h2-PVa" id="Lc0-JG-Djy"/>
+            </connections>
+            <point key="canvasLocation" x="96" y="82"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="orangutan" width="750" height="500"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

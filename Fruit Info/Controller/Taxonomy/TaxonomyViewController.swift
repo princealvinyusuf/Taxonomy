@@ -36,6 +36,15 @@ class TaxonomyViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if !UserDefaultService.instance.isFirstLaunched {
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let welcomeVC = storyBoard.instantiateViewController(withIdentifier: "WelcomeViewController") as! WelcomeViewController
+            self.present(welcomeVC, animated:true, completion:nil)
+            return
+        }
+    }
+    
     
 }
 

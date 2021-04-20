@@ -13,6 +13,9 @@
 		9F3C4057260F5F9200ACB1AF /* FruitObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C4056260F5F9200ACB1AF /* FruitObject.swift */; };
 		9F3C405A260F656B00ACB1AF /* CFruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3C4059260F656B00ACB1AF /* CFruitViewController.swift */; };
 		9F7C635C26293D7B00682749 /* AnimalObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7C635B26293D7B00682749 /* AnimalObject.swift */; };
+		9F97565B262F0462000CC8EC /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F97565A262F0462000CC8EC /* SlideView.swift */; };
+		9F97565F262F049C000CC8EC /* SlideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F97565E262F049C000CC8EC /* SlideView.xib */; };
+		9F975662262F06DB000CC8EC /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F975661262F06DB000CC8EC /* WelcomeViewController.swift */; };
 		9FB1487A260E9D3300028494 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB14879260E9D3300028494 /* AppDelegate.swift */; };
 		9FB1487C260E9D3300028494 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1487B260E9D3300028494 /* SceneDelegate.swift */; };
 		9FB1487E260E9D3300028494 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB1487D260E9D3300028494 /* FruitViewController.swift */; };
@@ -40,6 +43,9 @@
 		9F3C4056260F5F9200ACB1AF /* FruitObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitObject.swift; sourceTree = "<group>"; };
 		9F3C4059260F656B00ACB1AF /* CFruitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CFruitViewController.swift; sourceTree = "<group>"; };
 		9F7C635B26293D7B00682749 /* AnimalObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalObject.swift; sourceTree = "<group>"; };
+		9F97565A262F0462000CC8EC /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		9F97565E262F049C000CC8EC /* SlideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideView.xib; sourceTree = "<group>"; };
+		9F975661262F06DB000CC8EC /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		9FB14876260E9D3300028494 /* Fruit Info.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruit Info.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FB14879260E9D3300028494 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FB1487B260E9D3300028494 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 			path = Animal;
 			sourceTree = "<group>";
 		};
+		9F975659262F0447000CC8EC /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9F97565A262F0462000CC8EC /* SlideView.swift */,
+				9F97565E262F049C000CC8EC /* SlideView.xib */,
+				9F975661262F06DB000CC8EC /* WelcomeViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		9FB1486D260E9D3300028494 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +183,7 @@
 		9FB14890260E9DFE00028494 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9F975659262F0447000CC8EC /* Onboarding */,
 				9FF82E9B262965C00066CA42 /* Taxonomy */,
 				9FF82E9A262965A90066CA42 /* Fruit */,
 				9FD51DEB262ADDA50026B703 /* Animal */,
@@ -291,6 +308,7 @@
 			files = (
 				9FB14886260E9D3300028494 /* LaunchScreen.storyboard in Resources */,
 				9FB14883260E9D3300028494 /* Assets.xcassets in Resources */,
+				9F97565F262F049C000CC8EC /* SlideView.xib in Resources */,
 				9FB14881260E9D3300028494 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,8 +375,10 @@
 				9FF82E97262963840066CA42 /* CollectionViewController.swift in Sources */,
 				9F039896260F03FA00E862F9 /* TaxonomyViewController.swift in Sources */,
 				9FD51DE9262ADD9D0026B703 /* CAnimalCell.swift in Sources */,
+				9F975662262F06DB000CC8EC /* WelcomeViewController.swift in Sources */,
 				9F187CAA262AD54E00AB68DF /* CAnimalViewController.swift in Sources */,
 				9FB14894260EAB0C00028494 /* FruitManager.swift in Sources */,
+				9F97565B262F0462000CC8EC /* SlideView.swift in Sources */,
 				9FF19ADB26281E7200290021 /* AnimalViewController.swift in Sources */,
 				9FF02DBF260F29F400DF994C /* FruitModel.swift in Sources */,
 				9FB1487C260E9D3300028494 /* SceneDelegate.swift in Sources */,
