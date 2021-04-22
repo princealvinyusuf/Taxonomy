@@ -35,18 +35,18 @@ class WelcomeViewController: UIViewController, UIScrollViewDelegate {
         
         let slideOne = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as! SlideView
         slideOne.welcomeImage.image = UIImage(named: "illustrateOne")
-        slideOne.underImageLabel.text = "Lorem Ipsum"
-        slideOne.descriptionLabel.text = "Lorem Ipsum Dolor Sit Amet"
+        slideOne.underImageLabel.text = "Help"
+        slideOne.descriptionLabel.text = "Need a help in deep learning of Taxonomy Classification?"
         
         let slideTwo = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as! SlideView
         slideTwo.welcomeImage.image = UIImage(named: "illustrateTwo")
-        slideTwo.underImageLabel.text = "Lorem Ipsum"
-        slideTwo.descriptionLabel.text = "Lorem Ipsum Dolor Sit Amet"
+        slideTwo.underImageLabel.text = "Easy"
+        slideTwo.descriptionLabel.text = "Easy and simple search?"
         
         let slideThree = Bundle.main.loadNibNamed("SlideView", owner: self, options: nil)?.first as! SlideView
-        slideThree.welcomeImage.image = UIImage(named: "illustrateTwo")
-        slideThree.underImageLabel.text = "Lorem Ipsum"
-        slideThree.descriptionLabel.text = "Lorem Ipsum Dolor Sit Amet"
+        slideThree.welcomeImage.image = UIImage(named: "illustrateThree")
+        slideThree.underImageLabel.text = "We provide an easy way to do it"
+        slideThree.descriptionLabel.text = ""
         
         return [slideOne, slideTwo, slideThree]
     }
