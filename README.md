@@ -1,5 +1,5 @@
 ### Taxonomy
-Taxonomy is a native iOS App to learn and get more information about science of classification of things or concepts, including animal, plant, and fungi.
+Taxonomy is a native iOS App to learn and get more information about science of classification of things or concepts, including animal and fruit.
 
 ### Screenshot
 ![alt text](https://github.com/princealvinyusuf/Taxonomy/blob/main/images/onboarding1.png?raw=true)
